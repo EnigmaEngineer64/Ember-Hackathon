@@ -1,0 +1,199 @@
+/* OTP Verification Page Styles */
+@font-face {
+  font-family: "BoldPixels";
+  src: url("../../public/fonts/BoldPixels.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.otp-page {
+  font-family: "BoldPixels", cursive;
+  background: url("../../public/images/HomePagebg.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+/* Wrapper */
+.wrapper {
+  background: url("../../public/images/HomePagebg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Main OTP Section */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #ffbfa1;
+  color: #fff;
+  box-sizing: border-box;
+  margin: 60px 80px;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+/* Avatar Section */
+.avatar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 500px;
+  height: 600px;
+  transform: scale(1.4);
+  position: relative;
+  top: -60px;
+}
+
+/* OTP Box */
+.login-box {
+  flex: 1;
+  background: #ffe0d2;
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  color: #ff5505;
+  font-size: 100px;
+  line-height: 1.1;
+}
+
+/* Input Groups */
+.input-group {
+  margin-bottom: 35px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #3b3b3b;
+}
+
+/* OTP Inputs */
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.otp-inputs input {
+  width: 50px;
+  height: 55px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  border: none;
+  background: #ff9b6c;
+  color: #fff;
+  transition: 0.3s;
+  outline: none;
+  font-family: "BoldPixels", cursive;
+}
+
+.otp-inputs input:focus {
+  background: #ff8a52;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #ffb400;
+}
+
+/* Buttons */
+.verify-btn {
+  background: #ff5505;
+  width: 100%;
+  border: none;
+  color: #ffffff;
+  font-family: "BoldPixels", cursive;
+  padding: 12px 28px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 30px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+
+.verify-btn:hover {
+  background: #e44600;
+  transform: scale(1.05);
+}
+
+/* Resend */
+.resend {
+  margin-top: 12px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #ff5505;
+  transition: 0.3s;
+  background: none;
+  border: none;
+  font-family: "BoldPixels", cursive;
+}
+
+.resend:hover {
+  color: #e44600;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .main {
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px;
+  }
+
+  .avatar img {
+    transform: scale(1.2);
+    width: 400px;
+    height: 500px;
+  }
+
+  .login-box h2 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .login-box {
+    padding: 30px 20px;
+  }
+
+  .login-box h2 {
+    font-size: 60px;
+  }
+
+  .input-group label {
+    font-size: 24px;
+  }
+
+  .verify-btn {
+    font-size: 24px;
+  }
+
+  .resend {
+    font-size: 20px;
+  }
+}

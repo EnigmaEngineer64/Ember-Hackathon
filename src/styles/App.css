@@ -1,0 +1,67 @@
+/* Global Styles */
+@font-face {
+  font-family: "BoldPixels";
+  src: url("../../public/fonts/BoldPixels.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "BoldPixels", cursive;
+  background: url("../../public/images/HomePagebg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Prevent horizontal scroll */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* App wrapper */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Common button styles */
+.btn {
+  font-family: "BoldPixels", cursive;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+}
+
+/* Loading spinner */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 24px;
+  color: #ff5505;
+}
+
+/* Error message */
+.error {
+  color: #ef4444;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+}

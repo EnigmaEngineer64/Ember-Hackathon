@@ -1,0 +1,112 @@
+/* Footer Styles */
+.footer {
+  padding: 0px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Newsletter */
+.newsletter {
+  text-align: center;
+}
+
+.newsletter button {
+  background: #ff5200;
+  width: 506px;
+  max-width: 90%;
+  padding: 12px 20px;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-family: "BoldPixels", cursive;
+  cursor: pointer;
+  font-size: 35px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background: #e44600;
+}
+
+/* Social Icons */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.social-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.socials img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-link-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "BoldPixels", cursive;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-link-btn:hover {
+  color: #ff5200;
+}
+
+/* Copyright */
+.copyright-container {
+  background: linear-gradient(to right, #ff5200, #ffc4a8);
+  height: 45px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(-50vw + 50%);
+}
+
+.copyright {
+  color: black;
+  font-size: 25px;
+  font-family: "BoldPixels", cursive;
+}
+
+@media (max-width: 768px) {
+  .newsletter button {
+    font-size: 24px;
+    width: 300px;
+  }
+
+  .footer-link-btn {
+    font-size: 18px;
+  }
+
+  .copyright {
+    font-size: 18px;
+  }
+}
