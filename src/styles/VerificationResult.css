@@ -8,7 +8,7 @@
 
 .verification-result-page {
   font-family: "BoldPixels", cursive;
-  background: url("../../public/images/HomePagebg.png");
+  /* background: url("../../public/images/HomePagebg.png"); */
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -16,24 +16,27 @@
 
 /* Wrapper */
 .wrapper {
-  background: url("../../public/images/HomePagebg.png");
+  /* background: url("../../public/images/HomePagebg.png"); */
   background-size: cover;
   background-position: center;
 }
 
 /* Main Verification Section */
+/* 🔹 Verification Section */
 .verification-section {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   min-height: 80vh;
   background-color: #ffbfa1;
   margin: 60px 80px;
   border-radius: 20px;
   padding: 40px;
+  gap: 60px; /* space between avatar & box */
+  /* overflow: hidden; */
 }
 
-/* Avatar Section */
+/* 🔹 Avatar Section */
 .avatar {
   flex: 1;
   display: flex;
@@ -42,26 +45,29 @@
 }
 
 .avatar img {
-  width: 500px;
-  height: 600px;
-  transform: scale(1.4);
-  position: relative;
-  top: -60px;
+  width: clamp(250px, 40vw, 500px); /* responsive scaling */
+  height: auto;
+  transform: scale(1.1);
+  object-fit: contain;
+  /* position: relative; */
+  top: 0; /* removed negative shift */
 }
 
-/* Verification Box */
+/* 🔹 Verification Box */
 .verification-box {
   flex: 1;
   background: #ffe0d2;
   backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 40px;
-  max-width: 700px;
+  min-width: 740px;
   width: 100%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   text-align: center;
   display: flex;
   flex-direction: column;
+  position: relative;
+  right: 30px;
   align-items: center;
   justify-content: center;
 }
@@ -70,21 +76,20 @@
   margin-bottom: 30px;
   letter-spacing: 2px;
   color: #ff5505;
-  font-size: 100px;
+  font-size: clamp(40px, 8vw, 100px); /* responsive font size */
   line-height: 1.1;
 }
 
-/* Success styling */
+/* ✅ State Colors */
 .success h2 {
   color: #22c55e;
 }
 
-/* Failed styling */
 .failed h2 {
   color: #ef4444;
 }
 
-/* Check Icon */
+/* 🔹 Check Icon */
 .check-icon {
   margin: 30px 0;
 }
@@ -96,72 +101,84 @@
 }
 
 @keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
 }
 
-/* Login Button */
-.login-btn {
-  background: #ff5505;
-  color: #ffffff;
-  font-family: "BoldPixels", cursive;
-  padding: 16px 48px;
+/* 🔹 Buttons */
+.login-btn,
+.try-again-btn {
+  font-family: "BoldPixels", 'cursive';
+  font-size: 24px;
+  padding: 14px 36px;
   border-radius: 25px;
   cursor: pointer;
-  font-size: 30px;
   letter-spacing: 1px;
-  transition: 0.3s;
+  transition: 0.3s ease;
   text-decoration: none;
   border: none;
-  margin-top: 20px;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 280px;
 }
 
+.login-btn {
+  background: #ff5505;
+  color: #fff;
+}
 .login-btn:hover {
   background: #e44600;
   transform: scale(1.05);
-  color: #ffffff;
 }
 
-/* Try Again Button for failed verification */
 .try-again-btn {
   background: #f59e0b;
-  color: #ffffff;
-  font-family: "BoldPixels", cursive;
-  padding: 16px 48px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 30px;
-  letter-spacing: 1px;
-  transition: 0.3s;
-  text-decoration: none;
-  border: none;
-  margin: 10px;
+  color: #fff;
 }
-
 .try-again-btn:hover {
   background: #d97706;
   transform: scale(1.05);
-  color: #ffffff;
 }
 
+/* 🔹 Button Group */
 .button-group {
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 100%;
-  max-width: 300px;
+  align-items: center;
 }
+
+/* 🔹 Responsive Adjustments */
+@media (max-width: 992px) {
+  .verification-section {
+    flex-direction: column;
+    margin: 30px 20px;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .avatar img {
+    width: clamp(180px, 60vw, 350px);
+    transform: scale(1);
+  }
+
+  .verification-box {
+    padding: 30px 20px;
+  }
+
+  .verification-box h2 {
+    font-size: clamp(32px, 6vw, 70px);
+  }
+
+  .login-btn,
+  .try-again-btn {
+    font-size: 20px;
+    padding: 12px 24px;
+  }
+}
+
 
 /* Responsive */
 @media (max-width: 1200px) {

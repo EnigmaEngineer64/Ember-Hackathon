@@ -47,6 +47,13 @@ function Navbar() {
           </li>
         </ul>
       </nav>
+      <div className="menu-toggle">
+        <img
+          className="menuToggle-img"
+          src="/images/menu.png"
+          alt="menu"
+        />
+      </div>
     </header>
   );
 }

@@ -1,72 +1,24 @@
-/* Reset and Fonts */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* overflow-x: hidden; */
-}
-
+/* Verification Result Pages Styles */
 @font-face {
-    font-family: 'BoldPixels';
-    src: url('/fonts/BoldPixels.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "BoldPixels";
+  src: url("../../public/fonts/BoldPixels.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-body{
-    font-family: 'BoldPixels', 'cursive';
-    background: url("images/HomePagebg.png");
+.verification-result-page {
+  font-family: "BoldPixels", cursive;
+  /* background: url("../../public/images/HomePagebg.png"); */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 }
 
 /* Wrapper */
 .wrapper {
-    background: url("images/HomePagebg.png");
-}
-
-/* Navbar */
-.header-wrapper{
-    /* background: url(images/HomePagebg.png); */
-    z-index: 2;
-}
-
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
-    width: 80vw;
-    height: 88px;
-    margin: auto;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-   -webkit-backdrop-filter: blur(10px);
-    box-shadow: 
-       0px -2px 4px rgba(0, 0, 0, 0.2),
-       inset 0px 2px 4px rgba(255, 255, 255, 0.4); 
-}
-
-.navbar nav ul{
-    display: flex;
-    list-style-type: none;
-    gap: 50px;
-}
-
-.logo-img{
-    height: 180px;
-    /* width: 180px; */
-    margin-top: 80px;
-    object-fit: contain;
-}
-
-.nav-items{
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-.nav-items:hover{
-    background-color: #FF5505;
-    border-radius: 20px;
+  /* background: url("../../public/images/HomePagebg.png"); */
+  background-size: cover;
+  background-position: center;
 }
 
 /* Main Verification Section */
