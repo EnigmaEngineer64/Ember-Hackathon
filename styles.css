@@ -1,0 +1,268 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Press Start 2P', sans-serif; /* Pixel style font */
+    background: #111;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-size: 1.2rem;
+    background: #ff4500;
+    padding: 5px 10px;
+    border-radius: 6px;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.8rem;
+  }
+  
+  .navbar a.active,
+  .navbar a:hover {
+    color: #ff4500;
+  }
+  
+  /* Hero */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5%;
+    background: #222;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+    color: #ff4500;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background: #ff4500;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+  
+  .hero-img img {
+    max-width: 250px;
+  }
+  
+  /* About */
+  .about {
+    display: flex;
+    align-items: center;
+    padding: 3rem 5%;
+    background: #444;
+    border-radius: 20px;
+    margin: 2rem;
+  }
+  
+  .about-text {
+    background: #ffdac1;
+    color: #000;
+    padding: 2rem;
+    border-radius: 20px;
+  }
+  
+  .about-text h2 {
+    color: #ff4500;
+    margin-bottom: 1rem;
+  }
+  
+  /* Contact */
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5%;
+    background: #f5a623;
+    border-radius: 20px;
+    margin: 2rem;
+  }
+  
+  .contact-left {
+    width: 60%;
+  }
+  
+  .contact-left h2 {
+    color: #ff4500;
+  }
+  
+  .contact-left span {
+    background: #fff;
+    color: #ff4500;
+    padding: 5px 10px;
+    border-radius: 6px;
+  }
+  
+  form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  form input,
+  form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+  }
+  
+  form button {
+    padding: 10px;
+    background: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .contact-img img {
+    max-width: 200px;
+  }
+  
+  /* FAQ */
+  .faq {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 5%;
+    background: #222;
+    border-radius: 20px;
+    margin: 2rem;
+  }
+  
+  .faq-box {
+    background: #ffdac1;
+    color: #000;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 60%;
+  }
+  
+  .faq-box h2 {
+    color: #ff4500;
+    margin-bottom: 1rem;
+  }
+  
+  details {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ff4500;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+  }
+  
+  .btn-secondary {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 10px;
+    background: #ff4500;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 2rem 5%;
+  }
+  
+  .newsletter p {
+    color: #ff4500;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .socials {
+    margin: 1rem 0;
+  }
+  
+  .socials img {
+    width: 20px;
+    margin: 0 10px;
+    filter: invert(1);
+  }
+  
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: #ff4500;
+  }
+  
+  copyright {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero, .about, .contact, .faq {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contact-left, .faq-box {
+      width: 100%;
+    }
+  
+    .hero-img img,
+    .about-img img,
+    .contact-img img,
+    .faq-img img {
+      max-width: 150px;
+      margin: 1rem auto;
+    }
+  }
+  

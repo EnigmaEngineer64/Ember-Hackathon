@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMBER - Signup</title>
+    <link rel="stylesheet" href="signUpPage.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Navbar -->
+        <header class="navbar">
+            <div class="logo">
+                <img class="logo-img" src="images/EMBER[1] 1 (2).png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="nav-items" href="#">Home</a></li>
+                    <li><a class="nav-items" href="#">Login</a></li>
+                    <li><a class="nav-items" href="#">Parental Ctrl</a></li>
+                    <li><a class="nav-items" href="#">About</a></li>
+                    <li><a class="nav-items" href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Create New Account Section -->
+    <section class="signup-section">
+        <div class="signup-container">
+
+            <!-- Left side image -->
+            <div class="signup-image">
+                <img src="images/logingKid.png" alt="Pixel Avatar">
+            </div>
+
+            <!-- Right side form -->
+            <div class="signup-form">
+                <h1 class="form-title">CREATE NEW ACCOUNT</h1>
+
+                <form>
+                    <div class="input-group two-col">
+                        <div class="col">
+                          <label for="fname">FIRST NAME</label>
+                          <input type="text" id="fname" required>
+                        </div>
+                        <div class="col">
+                          <label for="sname">SURNAME</label>
+                          <input type="text" id="sname" required>
+                        </div>
+                      </div>
+
+                    <div class="input-group">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender"> Male</label>
+                            <label><input type="radio" name="gender"> Female</label>
+                            <label><input type="radio" name="gender"> Other</label>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="dob">Date of Birth</label>
+                        <input class="width100" type="date" id="dob" name="dob" required>
+                      </div>
+
+                    <div class="input-group">
+                        <label>EMAIL ID</label>
+                        <input class="width100" type="email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>MOBILE NO.</label>
+                        <input class="width100" type="tel"required>
+                    </div>
+
+                    <button type="submit" class="btn signup-btn">Sign Up</button>
+                </form>
+
+            </div>
+        </div>
+        <div class="login-box">
+            <p>Already have an account?</p>
+            <a class="btn login-btn" href="loginPage.html" class="btn">LOGIN</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <!-- Newsletter -->
+        <div class="newsletter">
+            <button>JOIN OUR NEWSLETTER</button>
+        </div>
+        <div class="socials">
+            <a href="#"><img class="image" src="images/linkedin.png"> </a>
+            <a href="#"><img class="image" src="images/instagram.png"> </a>
+            <a href="#"><img class="image" src="images/facebook.png"> </a>
+            <a href="#"><img class="image" src="images/call.png"> </a>
+            <a href="#"><img class="image" src="images/mail.png"> </a>
+        </div>
+        <div class="links">
+            <a href="#">HOME</a>
+            <a href="#">NEWS</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT US</a>
+            <a href="#">OUR TEAM</a>
+            <a href="#">PRIVACY POLICY</a>
+            <a href="#">COOKIES POLICY</a>
+            <a href="#">TERMS & CONDITIONS</a>
+        </div>
+    </footer>
+
+    <div class="copyrightcontainer">
+        <div class="copyright"> <b> COPYRIGHT ©️ 2025, TEAM KINETICX </b></div>
+    </div>
+</body>
+
+</html>
