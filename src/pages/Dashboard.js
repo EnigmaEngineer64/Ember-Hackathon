@@ -37,7 +37,7 @@ function Dashboard() {
           <div className="hero-text">
             <h1 className="hero-heading">AI THAT CARES</h1>
             <p className="hero-subheading">LEARNING THAT LASTS</p>
-            <button className="btn-start">START</button>
+            <a href="/chat" className="btn-start">START</a>
           </div>
           <div className="hero-img">
             <img src="/images/heroSectionImg.png" alt="Hero Character" />
