@@ -1,0 +1,12 @@
+[project]
+name = "llm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "flask>=3.1.2",
+    "flask-cors>=5.0.0",
+    "groq>=0.31.1",
+]

@@ -31,6 +31,11 @@ function Navbar() {
             </Link>
           </li>
           <li>
+            <Link className={isActive("/chat")} to="/chat">
+              AI Chat
+            </Link>
+          </li>
+          <li>
             <Link className="nav-items" to="#">
               Parental Ctrl
             </Link>
@@ -48,11 +53,7 @@ function Navbar() {
         </ul>
       </nav>
       <div className="menu-toggle">
-        <img
-          className="menuToggle-img"
-          src="/images/menu.png"
-          alt="menu"
-        />
+        <img className="menuToggle-img" src="/images/menu.png" alt="menu" />
       </div>
     </header>
   );

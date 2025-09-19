@@ -6,6 +6,7 @@ import SignUpPage from "./pages/SignUpPage";
 import OTPVerification from "./pages/OTPVerification";
 import VerificationSuccess from "./pages/VerificationSuccess";
 import VerificationFailed from "./pages/VerificationFailed";
+import ChatPage from "./pages/ChatPage";
 import "./styles/App.css";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             element={<VerificationSuccess />}
           />
           <Route path="/verification-failed" element={<VerificationFailed />} />
+          <Route path="/chat" element={<ChatPage />} />
           {/* Catch all route - redirect to home */}
           <Route path="*" element={<Dashboard />} />
         </Routes>
