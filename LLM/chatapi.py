@@ -124,7 +124,7 @@ if __name__ == '__main__':
         print("Warning: GROQ_API_KEY not set. Please add it to your .env file")
     
     print("Starting Chat API server...")
-    print("Health check: http://localhost:5000/health")
-    print("Chat endpoint: http://localhost:5000/chat")
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    print("Health check: http://localhost:5001/health")
+    print("Chat endpoint: http://localhost:5001/chat")
+    app.run(debug=True, host='0.0.0.0', port=5001)
 

@@ -5,6 +5,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Pantons";
+  src: url("../../public/fonts/panton.black-caps.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   margin: 0;

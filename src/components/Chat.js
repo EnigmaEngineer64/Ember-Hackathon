@@ -45,7 +45,7 @@ const Chat = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/chat", {
+      const response = await axios.post("http://localhost:5001/chat", {
         message: userMessage,
         session_id: sessionId,
       });
@@ -78,7 +78,7 @@ const Chat = () => {
 
   const clearChat = async () => {
     try {
-      await axios.delete(`http://localhost:5000/chat/clear/${sessionId}`);
+      await axios.delete(`http://localhost:5001/chat/clear/${sessionId}`);
       setMessages([]);
       setError("");
     } catch (error) {

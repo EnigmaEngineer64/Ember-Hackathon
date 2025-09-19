@@ -11,11 +11,11 @@ function Footer() {
     <>
       <footer className="footer">
         {/* Newsletter */}
-        <div className="newsletter">
+        {/* <div className="newsletter">
           <button onClick={() => handleClick("Newsletter")}>
             JOIN OUR NEWSLETTER
           </button>
-        </div>
+        </div> */}
 
         {/* Social Media Links */}
         <div className="socials">
@@ -52,7 +52,7 @@ function Footer() {
         </div>
 
         {/* Footer Links */}
-        <div className="footer-links">
+        {/* <div className="footer-links">
           <button
             onClick={() => handleClick("Home")}
             className="footer-link-btn">
@@ -93,7 +93,7 @@ function Footer() {
             className="footer-link-btn">
             TERMS & CONDITIONS
           </button>
-        </div>
+        </div> */}
       </footer>
 
       {/* Copyright */}

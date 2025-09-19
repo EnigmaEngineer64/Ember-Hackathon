@@ -35,21 +35,21 @@ function Navbar() {
               AI Chat
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link className="nav-items" to="#">
               Parental Ctrl
             </Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link className="nav-items" to="#">
               About
             </Link>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <Link className="nav-items" to="#">
               Contact
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <div className="menu-toggle">
