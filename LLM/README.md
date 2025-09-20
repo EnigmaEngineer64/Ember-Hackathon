@@ -1,6 +1,27 @@
-# AI Chat Backend API
+# ADHD-Friendly AI Chat Backend API
 
-This is the backend API for the AI chat feature using Flask and Groq AI.
+This backend API is specifically designed to provide ADHD-friendly responses using Flask and Groq AI.
+
+## ADHD-Optimized Features
+
+### System Prompt Integration
+The API automatically prepends every conversation with instructions that ensure all AI responses are optimized for people with ADHD:
+
+- **Short sentences** (max 15-20 words)
+- **Clear headings** with emojis for visual organization
+- **Bullet points and numbered lists** for easy scanning
+- **Visual breaks** with proper spacing
+- **Bold text** for key points
+- **Direct, concise communication** style
+- **Actionable steps** when applicable
+- **Encouraging and positive tone**
+
+### Response Structure
+All AI responses follow this ADHD-friendly structure:
+1. Brief summary first
+2. Clear headings to organize content
+3. Bullet points for details
+4. Clear next steps when applicable
 
 ## Setup Instructions
 

@@ -57,12 +57,46 @@ def chat():
         if session_id not in conversations:
             conversations[session_id] = []
 
+        # ADHD-friendly system prompt to optimize responses
+        adhd_system_prompt = """You are an AI assistant specifically designed to help people with ADHD. Please follow these guidelines in ALL your responses:
+
+📋 FORMATTING RULES:
+• Use short sentences (max 15-20 words)
+• Break information into small chunks
+• Use bullet points and numbered lists
+• Include clear headings with emojis
+• Avoid long paragraphs (max 3-4 sentences)
+• Use bold text for **key points**
+• Include visual breaks with spacing
+
+🎯 COMMUNICATION STYLE:
+• Be direct and concise
+• Start with the main point first
+• Use simple, clear language
+• Provide actionable steps
+• Include encouraging and positive tone
+• Avoid overwhelming details
+
+📝 STRUCTURE:
+• Start with a brief summary
+• Use headings to organize content
+• End with clear next steps if applicable
+
+Remember: The person you're helping has ADHD, so clarity and brevity are essential."""
+
+        # Add system prompt at the beginning if this is a new conversation
+        if len(conversations[session_id]) == 1:  # Only user message exists
+            conversations[session_id].insert(0, {"role": "system", "content": adhd_system_prompt})
+
         # Add user message to history
         conversations[session_id].append({"role": "user", "content": user_message})
 
-        # Keep only last 10 messages to prevent token overflow
-        if len(conversations[session_id]) > 10:
-            conversations[session_id] = conversations[session_id][-10:]
+        # Keep only last 12 messages (including system prompt) to prevent token overflow
+        if len(conversations[session_id]) > 12:
+            # Always keep the system prompt (first message) and recent messages
+            system_prompt = conversations[session_id][0]
+            recent_messages = conversations[session_id][-11:]
+            conversations[session_id] = [system_prompt] + recent_messages
 
         # Create chat completion
         response = client.chat.completions.create(

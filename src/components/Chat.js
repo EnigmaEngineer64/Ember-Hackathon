@@ -1,6 +1,143 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import ReactMarkdown from "react-markdown";
 import "../styles/Chat.css";
+
+// Bionic reading utility function
+const createBionicText = (text) => {
+  if (!text || typeof text !== "string") return text;
+
+  // Handle text that might contain HTML tags
+  return text.replace(/\b(\w{2,})\b/g, (word) => {
+    const midPoint = Math.ceil(word.length / 2);
+    const boldPart = word.slice(0, midPoint);
+    const normalPart = word.slice(midPoint);
+    return `<span class="bionic-bold">${boldPart}</span>${normalPart}`;
+  });
+};
+
+// Function to extract text content from React children
+const extractTextContent = (children) => {
+  if (typeof children === "string") return children;
+  if (typeof children === "number") return children.toString();
+  if (Array.isArray(children)) {
+    return children.map(extractTextContent).join("");
+  }
+  if (React.isValidElement(children)) {
+    return extractTextContent(children.props.children);
+  }
+  return "";
+};
+
+// Custom ReactMarkdown components with bionic reading
+const bionicMarkdownComponents = {
+  p: ({ children }) => {
+    const textContent = extractTextContent(children);
+    return (
+      <p
+        dangerouslySetInnerHTML={{
+          __html: createBionicText(textContent),
+        }}
+      />
+    );
+  },
+  li: ({ children }) => {
+    const textContent = extractTextContent(children);
+    return (
+      <li
+        dangerouslySetInnerHTML={{
+          __html: createBionicText(textContent),
+        }}
+      />
+    );
+  },
+  // Keep structural elements normal but apply bionic to text content
+  h1: ({ children }) => {
+    const textContent = extractTextContent(children);
+    return (
+      <h1
+        dangerouslySetInnerHTML={{
+          __html: createBionicText(textContent),
+        }}
+      />
+    );
+  },
+  h2: ({ children }) => {
+    const textContent = extractTextContent(children);
+    return (
+      <h2
+        dangerouslySetInnerHTML={{
+          __html: createBionicText(textContent),
+        }}
+      />
+    );
+  },
+  h3: ({ children }) => {
+    const textContent = extractTextContent(children);
+    return (
+      <h3
+        dangerouslySetInnerHTML={{
+          __html: createBionicText(textContent),
+        }}
+      />
+    );
+  },
+  h4: ({ children }) => {
+    const textContent = extractTextContent(children);
+    return (
+      <h4
+        dangerouslySetInnerHTML={{
+          __html: createBionicText(textContent),
+        }}
+      />
+    );
+  },
+  h5: ({ children }) => {
+    const textContent = extractTextContent(children);
+    return (
+      <h5
+        dangerouslySetInnerHTML={{
+          __html: createBionicText(textContent),
+        }}
+      />
+    );
+  },
+  h6: ({ children }) => {
+    const textContent = extractTextContent(children);
+    return (
+      <h6
+        dangerouslySetInnerHTML={{
+          __html: createBionicText(textContent),
+        }}
+      />
+    );
+  },
+  strong: ({ children }) => {
+    const textContent = extractTextContent(children);
+    return (
+      <strong
+        dangerouslySetInnerHTML={{
+          __html: createBionicText(textContent),
+        }}
+      />
+    );
+  },
+  em: ({ children }) => {
+    const textContent = extractTextContent(children);
+    return (
+      <em
+        dangerouslySetInnerHTML={{
+          __html: createBionicText(textContent),
+        }}
+      />
+    );
+  },
+  code: ({ children }) => <code>{children}</code>,
+  pre: ({ children }) => <pre>{children}</pre>,
+  blockquote: ({ children }) => <blockquote>{children}</blockquote>,
+  ul: ({ children }) => <ul>{children}</ul>,
+  ol: ({ children }) => <ol>{children}</ol>,
+};
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -113,7 +250,19 @@ const Chat = () => {
               message.sender === "user" ? "user-message" : "ai-message"
             }`}>
             <div className="message-content">
-              <div className="message-text">{message.text}</div>
+              <div className="message-text">
+                {message.sender === "ai" ? (
+                  <ReactMarkdown components={bionicMarkdownComponents}>
+                    {message.text}
+                  </ReactMarkdown>
+                ) : (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: createBionicText(message.text),
+                    }}
+                  />
+                )}
+              </div>
               <div className="message-timestamp">{message.timestamp}</div>
             </div>
           </div>
